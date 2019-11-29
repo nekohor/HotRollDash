@@ -1,20 +1,36 @@
 {
-    "name": "laravel/laravel",
+    "name": "tuandm/laravue",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "A beautiful dashboard for Laravel built by VueJS",
     "keywords": [
-        "framework",
-        "laravel"
+        "laravel",
+        "laravue",
+        "vue",
+        "admin",
+        "dashboard"
     ],
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Tuan Duong",
+            "email": "bacduong@gmail.com",
+            "homepage": "https://laravue.dev",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "^6.2",
-        "laravel/tinker": "^1.0"
+        "laravel/framework": "^6.0",
+        "laravel/tinker": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "spatie/laravel-permission": "^3.0",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.0",
         "facade/ignition": "^1.4",
+        "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",

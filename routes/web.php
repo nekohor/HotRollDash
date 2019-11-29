@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{any}', 'SpaController@index')->where('any', '.*');
+Route::group(['middleware' => 'web'], function () {
+    Route::get(env('LARAVUE_PATH'), 'LaravueController@index')->where('any', '.*')->name('laravue');
+});
