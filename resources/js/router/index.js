@@ -93,6 +93,19 @@ export const constantRoutes = [
     ],
   },
   {
+    path: '/process',
+    component: Layout,
+    redirect: 'process',
+    children: [
+      {
+        path: 'process',
+        component: () => import('@/views/dashboard/index'),
+        name: 'ProcessAnalysis',
+        meta: { title: 'processAnalysis', icon: 'tree', noCache: false },
+      },
+    ],
+  },
+  {
     path: '/documentation',
     component: Layout,
     redirect: '/documentation/index',

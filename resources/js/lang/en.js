@@ -1,6 +1,7 @@
 export default {
   route: {
     dashboard: 'Dashboard',
+    processAnalysis: 'Process Analysis',
     introduction: 'Introduction',
     documentation: 'Documentation',
     guide: 'Guide',
