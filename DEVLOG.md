@@ -55,3 +55,21 @@ yarn run dev # or yarn run watch
 # Start local development server
 php artisan serve
 ```
+
+router中修改数组元素，i18n新增名称
+
+------------------------
+indent修正
+
+
+
+Vue中提示tab缩进代码时缩进一直是2格而不是4格，检查了一下phpStorm的配置：
+File > Settings > Editor > Code Style > JavaScript的设置，发现Indent的键值为4：
+
+于是修改项目根目录下的.editorconfig配置文件中indent_sie为2
+
+将该indent_size的值修改为4保存即可。
+
+注：在修改后必须关闭项目或重启PhpStorm才能使设置生效！
+
+------------------------

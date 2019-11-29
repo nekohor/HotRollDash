@@ -13,5 +13,9 @@ trim_trailing_whitespace = false
 
 [*.yml]
 indent_size = 2
+
 [*.php]
 indent_size = 4
+
+[*.vue]
+indent_size = 2

@@ -99,7 +99,7 @@ export const constantRoutes = [
     children: [
       {
         path: 'process',
-        component: () => import('@/views/dashboard/index'),
+        component: () => import('@/views/process/index'),
         name: 'ProcessAnalysis',
         meta: { title: 'processAnalysis', icon: 'tree', noCache: false },
       },
