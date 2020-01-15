@@ -99,38 +99,51 @@ export const constantRoutes = [
     children: [
       {
         path: 'process',
-        component: () => import('@/views/process/index'),
+        component: () => import('@/views/hot-roll/process/index'),
         name: 'ProcessAnalysis',
         meta: { title: 'processAnalysis', icon: 'tree', noCache: false },
       },
     ],
   },
   {
-    path: '/documentation',
+    path: '/pieces-an-hour',
     component: Layout,
-    redirect: '/documentation/index',
+    redirect: 'pieces-an-hour',
     children: [
       {
-        path: 'index',
-        component: () => import('@/views/documentation/index'),
-        name: 'Documentation',
-        meta: { title: 'documentation', icon: 'documentation', noCache: true },
+        path: 'pieces-an-hour',
+        component: () => import('@/views/hot-roll/production/PiecesAnHour'),
+        name: 'PiecesAnHour',
+        meta: { title: 'PiecesAnHour', icon: 'tree', noCache: false },
       },
     ],
   },
-  {
-    path: '/guide',
-    component: Layout,
-    redirect: '/guide/index',
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/guide/index'),
-        name: 'Guide',
-        meta: { title: 'guide', icon: 'guide', noCache: true },
-      },
-    ],
-  },
+  // {
+  //   path: '/documentation',
+  //   component: Layout,
+  //   redirect: '/documentation/index',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/documentation/index'),
+  //       name: 'Documentation',
+  //       meta: { title: 'documentation', icon: 'documentation', noCache: true },
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: '/guide',
+  //   component: Layout,
+  //   redirect: '/guide/index',
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/guide/index'),
+  //       name: 'Guide',
+  //       meta: { title: 'guide', icon: 'guide', noCache: true },
+  //     },
+  //   ],
+  // },
   elementUiRoutes,
 ];
 
