@@ -2,6 +2,7 @@ export default {
   route: {
     dashboard: '首页',
     processAnalysis: '过程分析',
+    YieldShiftCalculation: '班组产量计算',
     introduction: '简述',
     documentation: '文档',
     guide: '引导页',

@@ -10,7 +10,12 @@
     <el-row :gutter="24">
       <el-col :span="24">
         <div class="el-transfer">
-          <el-transfer v-model="transferValue" :titles="['已导入的计划', '待评估的计划']" :data="transferData" />
+          <el-transfer
+            v-model="transferValue"
+            :target-order="targetOrder"
+            :titles="['已导入的计划', '待评估的计划']"
+            :data="transferData"
+          />
         </div>
       </el-col>
     </el-row>
@@ -46,6 +51,7 @@ export default {
       dataTables: {},
       dataTable: [],
       tableHeader: [],
+      uploadedPlanIds: [],
 
       transferData: [],
       transferValue: [],
@@ -53,6 +59,8 @@ export default {
 
       resultData: [],
       resultHeader: [],
+
+      targetOrder: 'push',
     };
   },
   methods: {
@@ -74,10 +82,11 @@ export default {
       this.transferData.unshift({
         key: this.transferData.length,
         label: millLine + ' ' + planId,
+        planId: planId,
       });
 
       this.dataTables[planId] = results;
-      this.selectedPlanIds.unshift(planId);
+      this.uploadedPlanIds.unshift(planId);
 
       this.tableHeader = header;
     },
@@ -96,14 +105,15 @@ export default {
       this.selectedPlanIds.forEach(planId => {
         const dataTable = this.dataTables[planId];
         dataTable.forEach(record => {
-          data.push(this.getRelatedInputElement(record));
+          data.push(this.getRelatedInputElement(planId, record));
         });
       });
       return data;
     },
-    getRelatedInputElement(record) {
+    getRelatedInputElement(planId, record) {
       const ele = {};
-      ele['steel_grade'] = record['成品钢种'];
+      ele['planId'] = planId;
+      ele['steelGrade'] = record['成品钢种'];
       ele['thk'] = parseFloat(record['成品规格'].split('*')[0]);
       ele['wid'] = record['头部宽度'];
       return ele;
@@ -123,22 +133,22 @@ export default {
       return m;
     },
     getGTWTag(record) {
-      return record['steel_grade'] + '_' + record['thk'] + '_' + record['wid'];
+      return record['steelGrade'] + '_' + record['thk'] + '_' + record['wid'];
     },
-    getCalcInputData() {
+    getCompressedInputData() {
       const inputData = [];
       const relatedData = this.getRelatedInputData();
       const gtwMap = this.getGTWMap(relatedData);
 
       gtwMap.forEach((value, key, map) => {
         const keys = key.split('_');
-        const steel_grade = keys[0];
+        const steelGrade = keys[0];
         const thk = parseFloat(keys[1]);
         const wid = parseInt(keys[2]);
         const count = value;
 
         inputData.push({
-          steel_grade: steel_grade,
+          steelGrade: steelGrade,
           thk: thk,
           wid: wid,
           count: count,
@@ -147,7 +157,24 @@ export default {
 
       return inputData;
     },
+    getSelectedPlanIds() {
+      const planIds = [];
+      this.transferValue.forEach(transferKey => {
+        for (let index = 0; index < this.transferData.length; index++) {
+          const element = this.transferData[index];
+
+          if (element.key === transferKey) {
+            planIds.push(element.planId);
+          }
+        }
+      });
+      return planIds;
+    },
     handleCalculateYield() {
+      this.resultData = [];
+      this.resultHeader = [];
+
+      this.selectedPlanIds = this.getSelectedPlanIds();
       console.log(this.selectedPlanIds);
 
       const hsmTags = this.selectedPlanIds.map(planId => {
@@ -163,10 +190,10 @@ export default {
       }
 
       const line = lines[0];
-      const inputData = this.getCalcInputData();
+      const inputData = this.getRelatedInputData();
       console.log(line);
       console.log(inputData);
-      console.log(JSON.stringify(inputData));
+      // console.log(JSON.stringify(inputData));
       this.calcuateYield(line, inputData);
     },
     calcuateYield(line, inputData) {
@@ -175,9 +202,16 @@ export default {
         inputData: inputData,
       };
       calcYield(formContent).then(response => {
+        this.resultData = response.data.resultData;
+        this.resultHeader = response.data.resultHeader;
+
+        console.log(this.uploadedPlanIds);
+        console.log(this.selectedPlanIds);
+
+        console.log(this.transferValue);
+        console.log(this.transferData);
+
         console.log(response.data);
-        // console.log(line);
-        // this.list1 = response.data;
       });
     },
   },
@@ -205,6 +239,6 @@ export default {
 }
 .el-table {
   width: 600px;
-  height: 280px;
+  /* height: 280px; */
 }
 </style>

@@ -2,6 +2,7 @@ export default {
   route: {
     dashboard: 'Dashboard',
     processAnalysis: 'Process Analysis',
+    YieldShiftCalculation: 'Yield Shift Calculation',
     introduction: 'Introduction',
     documentation: 'Documentation',
     guide: 'Guide',
