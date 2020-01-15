@@ -156,25 +156,28 @@ export default {
       const lines = Array.from(new Set(hsmTags));
       if (lines.length > 1) {
         this.$message({
-          message: '请勿跨产线计算',
+          message: '请勿跨产线计算产量',
           type: 'warning',
         });
         return false;
       }
 
       const line = lines[0];
+      const inputData = this.getCalcInputData();
       console.log(line);
-      console.log(this.getCalcInputData());
+      console.log(inputData);
+      console.log(JSON.stringify(inputData));
+      this.calcuateYield(line, inputData);
     },
     calcuateYield(line, inputData) {
-      const postForm = {
+      const formContent = {
         line: line,
         inputData: inputData,
       };
-      calcYield(postForm).then(response => {
+      calcYield(formContent).then(response => {
         console.log(response.data);
-        this.list1 = response.data.items.splice(0, 5);
-        this.list2 = response.data.items;
+        // console.log(line);
+        // this.list1 = response.data;
       });
     },
   },

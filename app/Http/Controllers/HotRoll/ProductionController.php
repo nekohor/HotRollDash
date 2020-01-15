@@ -13,6 +13,9 @@ class ProductionController extends Controller
         $line = $request->input("line");
         $inputData = $request->input("inputData");
 
-        return response()->json(new JsonResponse(['line' => $line, 'result'=> $inputData]));
+        
+        
+
+        return response()->json(new JsonResponse(['line' => $line, 'result'=> $inputData[0]]));
     }
 }

@@ -14,6 +14,8 @@ use \App\Laravue\JsonResponse;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('rules/imports', 'HotRoll\RulesImportController@importRules');
+Route::post('production/yield/shift', 'HotRoll\ProductionController@yieldShift');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -33,7 +35,6 @@ Route::group(['middleware' => 'api'], function () {
     Route::get('roles/{role}/permissions', 'RoleController@permissions')->middleware('permission:' . \App\Laravue\Acl::PERMISSION_PERMISSION_MANAGE);
     Route::apiResource('permissions', 'PermissionController')->middleware('permission:' . \App\Laravue\Acl::PERMISSION_PERMISSION_MANAGE);
 
-    Route::get('production/yield/shift', 'HotRoll\ProductionController@yieldShift');
     // Fake APIs
     Route::get('/table/list', function () {
         $rowsNumber = mt_rand(20, 30);
