@@ -36,7 +36,7 @@
 
 <script>
 import UploadExcelComponent from '@/components/UploadExcel/index.vue';
-import calcYield from '@/api/article';
+import { calcYield } from '@/api/production';
 
 export default {
   name: 'PiecesAnHour',

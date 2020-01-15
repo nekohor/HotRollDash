@@ -7,3 +7,11 @@ export function calcYield(data) {
     data,
   });
 }
+
+export function gradeCategos(query) {
+  return request({
+    url: '/grade/categos',
+    method: 'get',
+    params: query,
+  });
+}
