@@ -1,11 +1,21 @@
 <template>
   <div>
-    <input ref="excel-upload-input" class="excel-upload-input" type="file" accept=".xlsx, .xls" @change="handleClick">
+    <input
+      ref="excel-upload-input"
+      class="excel-upload-input"
+      type="file"
+      accept=".xlsx, .xls"
+      @change="handleClick"
+    >
     <div class="drop" @drop="handleDrop" @dragover="handleDragover" @dragenter="handleDragover">
       拖拽文件到这里，或者点击
-      <el-button :loading="loading" style="margin-left:16px;" size="mini" type="primary" @click="handleUpload">
-        浏览
-      </el-button>
+      <el-button
+        :loading="loading"
+        style="margin-left:16px;"
+        size="mini"
+        type="primary"
+        @click="handleUpload"
+      >浏览</el-button>
     </div>
   </div>
 </template>
@@ -47,7 +57,9 @@ export default {
       const rawFile = files[0]; // only use files[0]
 
       if (!this.isExcel(rawFile)) {
-        this.$message.error('Only supports upload .xlsx, .xls, .csv suffix files');
+        this.$message.error(
+          'Only supports upload .xlsx, .xls, .csv suffix files'
+        );
         return false;
       }
       this.upload(rawFile);
@@ -106,7 +118,8 @@ export default {
       let C;
       const R = range.s.r;
       /* start in the first row */
-      for (C = range.s.c; C <= range.e.c; ++C) { /* walk every column in the range */
+      for (C = range.s.c; C <= range.e.c; ++C) {
+        /* walk every column in the range */
         const cell = sheet[XLSX.utils.encode_cell({ c: C, r: R })];
         /* find the cell in the first row */
         let hdr = 'UNKNOWN ' + C; // <-- replace with your desired default
@@ -125,11 +138,11 @@ export default {
 </script>
 
 <style scoped>
-.excel-upload-input{
+.excel-upload-input {
   display: none;
   z-index: -9999;
 }
-.drop{
+.drop {
   border: 2px dashed #bbb;
   width: 600px;
   height: 80px;
@@ -138,6 +151,7 @@ export default {
   font-size: 18px;
   border-radius: 5px;
   text-align: center;
+  vertical-align: middle;
   color: #bbb;
   position: relative;
 }
