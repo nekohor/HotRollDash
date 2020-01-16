@@ -1,0 +1,28 @@
+[qms]
+database_type="oracle"
+database_name="qmsdb"
+server="172.27.36.1"
+username="qms"
+password="system"
+
+[mes]
+database_type="oracle"
+database_name="hrmcrm"
+server="172.25.12.7"
+username="hrmmes"
+password="hrmmes"
+
+[coil]
+    [coil.2250]
+    database_type="mysql"
+    database_name="coil_2250"
+    server="192.168.88.158"
+    username="root"
+    password=""
+
+    [coil.1580]
+    database_type="mysql"
+    database_name="coil_1580"
+    server="192.168.88.158"
+    username="root"
+    password=""

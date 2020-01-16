@@ -1,0 +1,35 @@
+[length.average]
+headPerc = 0.33
+tailPerc = 0.33
+
+[length.bite]
+
+    [length.bite.2250]
+    headLen = 150
+    tailLen = 50
+
+    [length.bite.1580]
+    headLen = 120
+    tailLen = 50
+
+[length.fifty]
+headLen = 50
+tailLen = 50
+
+[cut.normal]
+headCut = 5
+tailCut = 5
+
+[cut.coldRoll]
+headCut = 8
+tailCut = 8
+
+[cut.r2dt]
+
+    [cut.r2dt.2250]
+    headCut = 5
+    tailCut = 25
+
+    [cut.r2dt.1580]
+    headCut = 18
+    tailCut = 25

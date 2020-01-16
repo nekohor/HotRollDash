@@ -2,7 +2,7 @@
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
       <h3 class="title">
-        {{ $t('login.title') }}
+        热轧工艺工程师助手
       </h3>
       <lang-select class="set-language" />
       <el-form-item prop="email">

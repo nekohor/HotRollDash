@@ -1,0 +1,20 @@
+{
+    "path": {
+        "curDir": "hrm"
+    },
+    "stats": {
+        "functionName": "aimRate",
+        "aim": 0,
+        "tolerance": 20,
+        "upper": 10,
+        "lower": 10,
+        "unit": "mm"
+    },
+    "lengthDivision": {
+        "lengthName": "head",
+        "headLen": 150,
+        "tailLen": 50,
+        "headCut": 8,
+        "tailCut": 8
+    }
+}

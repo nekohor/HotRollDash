@@ -1,0 +1,7 @@
+[asym_flt]
+internalNames = ["flt_ro1", "flt_ro5"]
+relationship = "minus"
+
+[sym_flt]
+internalNames = ["flt_ro1", "flt_ro3", "flt_ro5"]
+relationship = "reverseCrown"
