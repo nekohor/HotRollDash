@@ -20,6 +20,8 @@
     ],
     "require": {
         "php": "^7.2",
+        "absolutelydigital/medoo-laravel": "dev-master",
+        "catfan/medoo": "^1.7",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
