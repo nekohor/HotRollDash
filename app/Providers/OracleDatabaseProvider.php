@@ -32,6 +32,7 @@ class OracleDatabaseProvider extends ServiceProvider
                     'server' => config($dbConnection . "host"),
                     'username' => config($dbConnection . "username"),
                     'password' => config($dbConnection . "password"),
+                    'options'  => [\PDO::ATTR_EMULATE_PREPARES => true]
                     // 'charset' => config($dbConnection . "charset"),
             ];
 
@@ -57,6 +58,7 @@ class OracleDatabaseProvider extends ServiceProvider
                     'server' => config($dbConnection . "host"),
                     'username' => config($dbConnection . "username"),
                     'password' => config($dbConnection . "password"),
+                    'options'  => [\PDO::ATTR_EMULATE_PREPARES => true]
                     // 'charset' => config($dbConnection . "charset"),
             ];
 

@@ -20,15 +20,16 @@
     ],
     "require": {
         "php": "^7.2",
-        "absolutelydigital/medoo-laravel": "dev-master",
         "catfan/medoo": "^1.7",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "league/flysystem-aws-s3-v3": "^1.0",
         "maatwebsite/excel": "^3.1",
+        "repat/laravel-medoo": "^1.0",
         "spatie/laravel-permission": "^3.0",
-        "tymon/jwt-auth": "^1.0"
+        "tymon/jwt-auth": "^1.0",
+        "yajra/laravel-oci8": "^6.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

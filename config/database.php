@@ -99,6 +99,14 @@ return [
             'password' => "system",
         ],
 
+        'mes' => [
+            'driver' => 'oracle',
+            'database'=> "hrmcrm",
+            'host' => "172.25.12.7",
+            'username' => "hrmmes",
+            'password' => "hrmmes",
+        ],
+
     ],
 
     /*

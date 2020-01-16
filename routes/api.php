@@ -17,6 +17,9 @@ use \App\Laravue\JsonResponse;
 Route::get('rules/imports', 'HotRoll\RulesImportController@importRules');
 Route::post('production/yield/shift', 'HotRoll\ProductionController@yieldShift');
 
+Route::get('production/yield/hour', 'HotRoll\MillHourOutputController@showExample');
+
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

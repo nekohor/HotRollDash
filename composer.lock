@@ -4,73 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9f08bb3cf7430aab9a1ea161d785de31",
+    "content-hash": "fbb79b8705e532bf57c10848767cb4e2",
     "packages": [
-        {
-            "name": "absolutelydigital/medoo-laravel",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/absolutelydigital/medoo-laravel.git",
-                "reference": "294cd65783599c3d34b3cdeef271494d15932506"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/absolutelydigital/medoo-laravel/zipball/294cd65783599c3d34b3cdeef271494d15932506",
-                "reference": "294cd65783599c3d34b3cdeef271494d15932506",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "ext-pdo": "*",
-                "illuminate/support": ">=5.0.0",
-                "php": ">=5.4.0"
-            },
-            "suggest": {
-                "ext-pdo_dblib": "For MSSQL or Sybase databases on Linux/UNIX platform",
-                "ext-pdo_mysql": "For MySQL or MariaDB databases",
-                "ext-pdo_oci": "For Oracle databases",
-                "ext-pdo_pqsql": "For PostgreSQL databases",
-                "ext-pdo_sqlite": "For SQLite databases",
-                "ext-pdo_sqlsrv": "For MSSQL databases on Windows platform"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "absolutelydigital\\": "src/",
-                    "absolutelydigital\\LaravelMedoo\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Absolutely Digital",
-                    "email": "git@absolutelydigital.net"
-                }
-            ],
-            "description": "Laravel Facade and ServiceProvider for The Lightest PHP database framework to accelerate development",
-            "homepage": "http://medoo.in",
-            "keywords": [
-                "database",
-                "laravel",
-                "lightweight",
-                "lumen",
-                "mssql",
-                "mysql",
-                "php framework",
-                "sql",
-                "sqlite"
-            ],
-            "time": "2018-06-01T12:48:05+00:00"
-        },
         {
             "name": "aws/aws-sdk-php",
             "version": "3.112.20",
@@ -2674,6 +2609,75 @@
             "time": "2018-07-19T23:38:55+00:00"
         },
         {
+            "name": "repat/laravel-medoo",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/repat/laravel-medoo.git",
+                "reference": "a31c4c38527412f111cea0835a629e2903958566"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/repat/laravel-medoo/zipball/a31c4c38527412f111cea0835a629e2903958566",
+                "reference": "a31c4c38527412f111cea0835a629e2903958566",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-pdo": "*",
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "ext-pdo_dblib": "For MSSQL or Sybase databases on Linux/UNIX platform",
+                "ext-pdo_mysql": "For MySQL or MariaDB databases",
+                "ext-pdo_oci": "For Oracle databases",
+                "ext-pdo_pqsql": "For PostgreSQL databases",
+                "ext-pdo_sqlite": "For SQLite databases",
+                "ext-pdo_sqlsrv": "For MSSQL databases on Windows platform"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "catfan\\": "src/",
+                    "repat\\LaravelMedoo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Angel Lai",
+                    "email": "angel@catfan.me"
+                },
+                {
+                    "name": "repat",
+                    "email": "repat@repat.de"
+                }
+            ],
+            "description": "Laravel Facade and ServiceProvider for The Lightest PHP database framework to accelerate development",
+            "homepage": "http://medoo.in",
+            "keywords": [
+                "database",
+                "laravel",
+                "lightweight",
+                "lumen",
+                "mssql",
+                "mysql",
+                "php framework",
+                "sql",
+                "sqlite"
+            ],
+            "time": "2015-12-14T20:01:27+00:00"
+        },
+        {
             "name": "spatie/laravel-permission",
             "version": "3.0",
             "source": {
@@ -4567,6 +4571,126 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "yajra/laravel-oci8",
+            "version": "v6.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-oci8.git",
+                "reference": "7e6d6211303f97dfc2aa3ebabf5fefb357ff8171"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/laravel-oci8/zipball/7e6d6211303f97dfc2aa3ebabf5fefb357ff8171",
+                "reference": "7e6d6211303f97dfc2aa3ebabf5fefb357ff8171",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-oci8": ">=2.0.0",
+                "ext-pdo": "*",
+                "illuminate/database": "^6.0",
+                "illuminate/support": "^6.0",
+                "php": "^7.2",
+                "yajra/laravel-pdo-via-oci8": "^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2.3",
+                "phpunit/phpunit": "^8.3",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Yajra\\Oci8\\Oci8ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Yajra\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "Oracle DB driver for Laravel 4|5 via OCI8",
+            "keywords": [
+                "laravel",
+                "laravel4",
+                "laravel5",
+                "oci8",
+                "oracle",
+                "pdo_oci"
+            ],
+            "time": "2019-11-26T01:54:05+00:00"
+        },
+        {
+            "name": "yajra/laravel-pdo-via-oci8",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/pdo-via-oci8.git",
+                "reference": "7295ed52a724887f66d01180a500ecdb76a22f4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yajra/pdo-via-oci8/zipball/7295ed52a724887f66d01180a500ecdb76a22f4c",
+                "reference": "7295ed52a724887f66d01180a500ecdb76a22f4c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "PDO userspace driver proxying calls to PHP OCI8 driver",
+            "time": "2019-12-05T06:00:56+00:00"
         }
     ],
     "packages-dev": [
@@ -6845,9 +6969,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "absolutelydigital/medoo-laravel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
