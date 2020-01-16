@@ -33,8 +33,8 @@
         </el-button>
       </el-form-item>
       <div class="tips">
-        <span style="margin-right:20px;">Email: admin@laravue.dev</span>
-        <span>Password: laravue</span>
+        <span style="margin-right:20px;">Email: user@hot.roll</span>
+        <span>Password: 22501580</span>
       </div>
     </el-form>
   </div>

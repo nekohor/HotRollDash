@@ -4,7 +4,7 @@ export default {
   /**
    * @type {String}
    */
-  title: '热轧工艺管理系统',
+  title: '热轧工艺工程师助手',
   theme: variables.theme,
 
   /**
