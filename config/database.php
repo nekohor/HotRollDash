@@ -91,6 +91,14 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'qms' => [
+            'driver' => 'oracle',
+            'database'=> "qmsdb",
+            'host' => "172.27.36.1",
+            'username' => "qms",
+            'password' => "system",
+        ],
+
     ],
 
     /*
