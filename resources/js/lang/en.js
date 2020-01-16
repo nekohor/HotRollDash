@@ -82,7 +82,7 @@ export default {
     profile: 'Profile',
   },
   login: {
-    title: 'Login Form',
+    title: 'Hot Roll Engineer Assistant',
     logIn: 'Log in',
     username: 'Username',
     password: 'Password',

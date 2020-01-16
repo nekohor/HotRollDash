@@ -78,7 +78,7 @@ export default {
     profile: '轮廓',
   },
   login: {
-    title: '系统登录',
+    title: '热轧工艺工程师助手',
     logIn: '登录',
     username: '账号',
     password: '密码',
