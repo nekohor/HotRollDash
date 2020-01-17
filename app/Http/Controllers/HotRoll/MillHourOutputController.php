@@ -11,7 +11,7 @@ use App\HotRoll\Database\Manager;
 use App\HotRoll\Bootstrap\Registry;
 
 use App;
-use Medoo;
+use DBMes;
 
 class MillHourOutputController extends Controller
 {
@@ -20,7 +20,7 @@ class MillHourOutputController extends Controller
         $coilId = $request->query("coilId");
 
         // $db = App::make('mesdb');
-        $data = Medoo::select("RHS_RESULT", [
+        $data = DBMes::select("RHS_RESULT", [
             "ACTCOILID", "PRODSTART", "PRODEND", "ACTSLABID", "GRADENAME", "HEXIT"
         ], [
             "ACTCOILID[=]" => "H110188900",

@@ -165,7 +165,6 @@ return [
         /*
          * Package Service Providers...
          */
-        // absolutelydigital\LaravelMedoo\MedooServiceProvider::class,
         repat\LaravelMedoo\MedooServiceProvider::class,
 
         /*
@@ -176,7 +175,11 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        App\Providers\OracleDatabaseProvider::class,
+
+        /*
+         *  HotRoll Service Providers...
+         */
+        App\HotRoll\Providers\OracleDatabaseProvider::class,
         
 
     ],
@@ -229,8 +232,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        // 'Medoo' => absolutelydigital\LaravelMedoo\MedooFacade::class,
         'Medoo' => repat\LaravelMedoo\MedooFacade::class,
+
+        'DBQms' => App\HotRoll\Facades\DBQmsFacade::class,
+        'DBMes' => App\HotRoll\Facades\DBMesFacade::class,
 
     ],
 
